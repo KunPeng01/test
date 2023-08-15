@@ -1,25 +1,19 @@
-﻿namespace Exception;
+﻿using Exception.Model;
+namespace Exception;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
+	Product _product;
+    
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+    void OnAddProduct(System.Object sender, System.EventArgs e)
+    {
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
 }
 
 

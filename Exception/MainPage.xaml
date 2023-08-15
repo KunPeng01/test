@@ -9,31 +9,30 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Label Text="Product Id"/>
+            <Entry x:Name="IdEntry" Placeholder="Product ID, e.g. 101"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <Label Text="Product Name"/>
+            <Entry x:Name="NameEntry" Placeholder="Product Name, e.g. Laptop"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Label Text="Price"/>
+            <Entry x:Name="PriceEntry" Placeholder="Price of the product, e.g. 100.99"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Label Text="Stock"/>
+            <Entry x:Name="StockEntry" Placeholder="Stock level, e.g. 10"/>
+
+            <Button 
+                Text="Add Product"
+                Clicked="OnAddProduct"
+                />
+
+            <HorizontalStackLayout>
+                <Entry x:Name="UnitsEntry"/>
+                
+                <Button  Text="Sell Product"
+                    Clicked="OnSellProduct"
+                />
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
